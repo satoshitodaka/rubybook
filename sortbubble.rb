@@ -5,11 +5,11 @@ loop do
   before_process = numbers.dup
   n = 0
   counts.times do
-    if numbers[n] > numbers[n+1]
+    if numbers[n] > numbers[n + 1]
       left_number = numbers[n]
-      right_number = numbers[n+1]
+      right_number = numbers[n + 1]
       numbers[n] = right_number
-      numbers[n+1] = left_number
+      numbers[n + 1] = left_number
     end
     n += 1
   end
