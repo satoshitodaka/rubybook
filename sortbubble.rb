@@ -1,14 +1,20 @@
-# timesで再作成
+# timesで作成
 numbers = [3, 1, 2, 5, 11, 4, 10, 7, 8, 6]
+# debugger
 counts = numbers.size
+n = 1
+# 並び換えA
 counts.times do
-  n = 1
-  (counts - n).times do
-    if numbers[n - 1] > numbers[n]
-      numbers[n - 1], numbers[n] = numbers[n], numbers[n - 1]
+  # 並び換えB
+  narabikae_kaisu = counts - n
+  p "並び換え回数:#{narabikae_kaisu}"
+  narabikae_kaisu.times do |x|
+    p "#{x}番目と#{x + 1}番目の数を比較し、必要があれば並び換える"
+    if numbers[x] > numbers[x + 1]
+      numbers[x], numbers[x + 1] = numbers[x + 1], numbers[x]
     end
-    n += 1
   end
+  n += 1
 end
 p numbers
 
